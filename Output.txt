@@ -1,0 +1,34 @@
+class Polymorph{
++Main():void
+}
+class Circle{
+Circle--|>Shape:Inheritance
+-radius:int
++getRadius():int
++setRadius():void
++draw():void
+}
+class Shape{
+-x:int
+-y:int
++getX():int
++getY():int
++setX():void
++setY():void
++moveTo():void
++rMoveTo():void
++draw():void
+}
+class Rectangle{
+Rectangle--|>Shape:Inheritance
+-width:int
+-height:int
++getWidth():int
++getHeight():int
++setWidth():void
++setHeight():void
++draw():void
+}
+Polymorph1 --> Shape
+Polymorph1 --> Rectangle
+Polymorph1 --> Circle

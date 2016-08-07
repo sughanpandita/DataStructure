@@ -1,0 +1,449 @@
+run:
+Line0:public class Polymorph1 {
+array:-public
+array:-class
+array:-Polymorph1
+array:-{
+Line0:   public static void main(String argv[]) {
+array:-public
+array:-static
+array:-void
+array:-main(String
+array:-argv[])
+array:-{
+Line0:   
+array:-
+Line0:      // create some shape instances
+array:-//
+array:-create
+array:-some
+array:-shape
+array:-instances
+Line0:      Shape scribble[] = new Shape[2];
+array:-Shape
+array:-scribble[]
+array:-=
+array:-new
+array:-Shape[2];
+Line0:      scribble[0] = new Rectangle(10, 20, 5, 6);
+array:-scribble[0]
+array:-=
+array:-new
+array:-Rectangle(10,
+array:-20,
+array:-5,
+array:-6);
+Line0:      scribble[1] = new Circle(15, 25, 8);
+array:-scribble[1]
+array:-=
+array:-new
+array:-Circle(15,
+array:-25,
+array:-8);
+Line0:   
+array:-
+Line0:      // iterate through the list and handle shapes polymorphically
+array:-//
+array:-iterate
+array:-through
+array:-the
+array:-list
+array:-and
+array:-handle
+array:-shapes
+array:-polymorphically
+Line0:      for (int i = 0; i < scribble.length; i++) {
+array:-for
+array:-(int
+array:-i
+array:-=
+array:-0;
+array:-i
+array:-<
+array:-scribble.length;
+array:-i++)
+array:-{
+Line0:         scribble[i].draw();
+array:-scribble[i].draw();
+Line0:         scribble[i].rMoveTo(100, 100);
+array:-scribble[i].rMoveTo(100,
+array:-100);
+Line0:         scribble[i].draw();
+array:-scribble[i].draw();
+Line0:      }
+array:-}
+Line0:   
+array:-
+Line0:      // call a rectangle specific function
+array:-//
+array:-call
+array:-a
+array:-rectangle
+array:-specific
+array:-function
+Line0:      Rectangle arect = new Rectangle(0, 0, 15, 15);
+array:-Rectangle
+array:-arect
+array:-=
+array:-new
+array:-Rectangle(0,
+array:-0,
+array:-15,
+array:-15);
+Line0:      arect.setWidth(30);
+array:-arect.setWidth(30);
+Line0:      arect.draw();
+array:-arect.draw();
+Line0:      
+array:-
+Line0: 
+array:-
+Line0:   }
+array:-}
+Line0:}
+array:-}
+Line0:class Circle extends Shape
+array:-class
+array:-Circle
+array:-extends
+array:-Shape
+Line0:{
+array:-{
+Line0:   private int radius;
+array:-private
+array:-int
+array:-radius;
+Line0:
+array:-
+Line0:   // constructor
+array:-//
+array:-constructor
+Line0:   Circle(int newx, int newy, int newradius) {
+array:-Circle(int
+array:-newx,
+array:-int
+array:-newy,
+array:-int
+array:-newradius)
+array:-{
+Line0:      super(newx, newy);
+array:-super(newx,
+array:-newy);
+Line0:      setRadius(newradius);
+array:-setRadius(newradius);
+Line0:   }
+array:-}
+Line0:
+array:-
+Line0:   // accessors for the radius
+array:-//
+array:-accessors
+array:-for
+array:-the
+array:-radius
+Line0:   int getRadius() { 
+array:-int
+array:-getRadius()
+array:-{
+Line0:      return radius; }
+array:-return
+array:-radius;
+array:-}
+Line0:   void setRadius(int newradius) { radius = newradius; }
+array:-void
+array:-setRadius(int
+array:-newradius)
+array:-{
+array:-radius
+array:-=
+array:-newradius;
+array:-}
+Line0:
+array:-
+Line0:   // draw the circle
+array:-//
+array:-draw
+array:-the
+array:-circle
+Line0:   void draw() {
+array:-void
+array:-draw()
+array:-{
+Line0:      System.out.println("Drawing a Circle at:(" + getX() + ", " + getY() +
+array:-System.out.println("Drawing
+array:-a
+array:-Circle
+array:-at:("
+array:-+
+array:-getX()
+array:-+
+array:-",
+array:-"
+array:-+
+array:-getY()
+array:-+
+Line0:         "), radius " + getRadius());
+array:-"),
+array:-radius
+array:-"
+array:-+
+array:-getRadius());
+Line0:   }
+array:-}
+Line0:    
+array:-
+Line0:}
+array:-}
+Line0:
+array:-
+Line0:abstract class Shape {
+array:-abstract
+array:-class
+array:-Shape
+array:-{
+Line0:   private int x;
+array:-private
+array:-int
+array:-x;
+Line0:   private int y;
+array:-private
+array:-int
+array:-y;
+Line0:
+array:-
+Line0:   // constructor
+array:-//
+array:-constructor
+Line0:   Shape(int newx, int newy) {
+array:-Shape(int
+array:-newx,
+array:-int
+array:-newy)
+array:-{
+Line0:      moveTo(newx, newy);
+array:-moveTo(newx,
+array:-newy);
+Line0:   }
+array:-}
+Line0:
+array:-
+Line0:   // accessors for x & y
+array:-//
+array:-accessors
+array:-for
+array:-x
+array:-&
+array:-y
+Line0:   int getX() { 
+array:-int
+array:-getX()
+array:-{
+Line0:      return x; }
+array:-return
+array:-x;
+array:-}
+Line0:   int getY() { 
+array:-int
+array:-getY()
+array:-{
+Line0:      return y; }
+array:-return
+array:-y;
+array:-}
+Line0:   void setX(int newx) { x = newx; }
+array:-void
+array:-setX(int
+array:-newx)
+array:-{
+array:-x
+array:-=
+array:-newx;
+array:-}
+Line0:   void setY(int newy) { y = newy; }
+array:-void
+array:-setY(int
+array:-newy)
+array:-{
+array:-y
+array:-=
+array:-newy;
+array:-}
+Line0:
+array:-
+Line0:   // move the x & y position
+array:-//
+array:-move
+array:-the
+array:-x
+array:-&
+array:-y
+array:-position
+Line0:   void moveTo(int newx, int newy) {
+array:-void
+array:-moveTo(int
+array:-newx,
+array:-int
+array:-newy)
+array:-{
+Line0:      setX(newx);
+array:-setX(newx);
+Line0:      setY(newy);
+array:-setY(newy);
+Line0:   }
+array:-}
+Line0:   void rMoveTo(int deltax, int deltay) {
+array:-void
+array:-rMoveTo(int
+array:-deltax,
+array:-int
+array:-deltay)
+array:-{
+Line0:      moveTo(getX() + deltax, getY() + deltay);
+array:-moveTo(getX()
+array:-+
+array:-deltax,
+array:-getY()
+array:-+
+array:-deltay);
+Line0:   }
+array:-}
+Line0:
+array:-
+Line0:   // virtual draw method
+array:-//
+array:-virtual
+array:-draw
+array:-method
+Line0:   abstract void draw();
+array:-abstract
+array:-void
+array:-draw();
+Line0:}
+array:-}
+Line0:class Rectangle extends Shape {
+array:-class
+array:-Rectangle
+array:-extends
+array:-Shape
+array:-{
+Line0:   private int width;
+array:-private
+array:-int
+array:-width;
+Line0:   private int height;
+array:-private
+array:-int
+array:-height;
+Line0:
+array:-
+Line0:   // constructor
+array:-//
+array:-constructor
+Line0:   Rectangle(int newx, int newy, int newwidth, int newheight) {
+array:-Rectangle(int
+array:-newx,
+array:-int
+array:-newy,
+array:-int
+array:-newwidth,
+array:-int
+array:-newheight)
+array:-{
+Line0:      super(newx, newy);
+array:-super(newx,
+array:-newy);
+Line0:      setWidth(newwidth);
+array:-setWidth(newwidth);
+Line0:      setHeight(newheight);
+array:-setHeight(newheight);
+Line0:   }
+array:-}
+Line0:
+array:-
+Line0:   // accessors for the width & height
+array:-//
+array:-accessors
+array:-for
+array:-the
+array:-width
+array:-&
+array:-height
+Line0:   int getWidth() { 
+array:-int
+array:-getWidth()
+array:-{
+Line0:      return width; }
+array:-return
+array:-width;
+array:-}
+Line0:   int getHeight() { 
+array:-int
+array:-getHeight()
+array:-{
+Line0:      return height; }
+array:-return
+array:-height;
+array:-}
+Line0:   void setWidth(int newwidth) { width = newwidth; }
+array:-void
+array:-setWidth(int
+array:-newwidth)
+array:-{
+array:-width
+array:-=
+array:-newwidth;
+array:-}
+Line0:   void setHeight(int newheight) { height = newheight; }
+array:-void
+array:-setHeight(int
+array:-newheight)
+array:-{
+array:-height
+array:-=
+array:-newheight;
+array:-}
+Line0:
+array:-
+Line0:   // draw the rectangle
+array:-//
+array:-draw
+array:-the
+array:-rectangle
+Line0:   void draw() {
+array:-void
+array:-draw()
+array:-{
+Line0:      System.out.println("Drawing a Rectangle at:(" + getX() + ", " + getY() +
+array:-System.out.println("Drawing
+array:-a
+array:-Rectangle
+array:-at:("
+array:-+
+array:-getX()
+array:-+
+array:-",
+array:-"
+array:-+
+array:-getY()
+array:-+
+Line0:         "), width " + getWidth() + ", height " + getHeight());
+array:-"),
+array:-width
+array:-"
+array:-+
+array:-getWidth()
+array:-+
+array:-",
+array:-height
+array:-"
+array:-+
+array:-getHeight());
+Line0:   }
+array:-}
+Line0:} 
+array:-}
+Line0: 
+array:-
+Line0:
+array:-
+BUILD SUCCESSFUL (total time: 0 seconds)
